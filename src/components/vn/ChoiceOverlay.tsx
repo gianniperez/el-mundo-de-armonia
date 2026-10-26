@@ -19,7 +19,7 @@ export const ChoiceOverlay: React.FC<ChoiceOverlayProps> = ({
         initial={{ opacity: 0, scale: 0.96 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.25 }}
-        className="absolute top-[28%] sm:top-[29%] md:top-[30%] left-[12%] sm:left-[16%] md:left-[24%] w-[68%] sm:w-[52%] md:w-[44%] max-w-lg pointer-events-auto flex flex-col gap-2.5 sm:gap-3"
+        className="absolute top-[26%] sm:top-[28%] md:top-[28%] left-[8%] sm:left-[10%] md:left-[14%] w-[75%] sm:w-[50%] md:w-[42%] max-w-md pointer-events-auto flex flex-col gap-2.5 sm:gap-3"
       >
         {choices.map((choice, index) => (
           <motion.button

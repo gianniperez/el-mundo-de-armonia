@@ -430,12 +430,8 @@ export const MOCK_STORY: Record<string, SceneData> = {
     sceneTitle: 'ESTACIÓN DE SUBTE',
     mode: 'layered',
     backgroundUrl: '/assets/Fondos/pergamino.jpg',
+    documentFont: 'script',
     documentText: '“Estimados ciudadanos de Refugia, mi nombre es José Schneider y soy el líder del Gremio de Exploradores. Me dirijo a ustedes con la intención de hacerles un anuncio de suma importancia:',
-    overlayImage: {
-      url: '/assets/schneider-foto.png',
-      alt: 'José Schneider',
-      position: 'bottom-right',
-    },
     navigationType: 'linear',
     nextSceneKey: 'carta_schneider_02',
   },
@@ -445,6 +441,7 @@ export const MOCK_STORY: Record<string, SceneData> = {
     sceneTitle: 'ESTACIÓN DE SUBTE',
     mode: 'layered',
     backgroundUrl: '/assets/Fondos/pergamino.jpg',
+    documentFont: 'serif',
     documentText: 'Como todos sabemos, nuestro país está atravesando la mayor crisis por falta de recursos de la historia. Hace algunos meses nos empezaron a faltar incluso algunos de los minerales mágicos más importantes, como la lumínica, una de las principales fuentes de energía que mantienen activas nuestras defensas. Esta situación podría exponernos a las peligrosas criaturas que viven en el exterior del país, las mismas por las que hace cientos de años nos mudamos bajo tierra. Así que para evitar este escenario, Lady María junto al consejo de Refugia, han decidido tomar las siguientes medidas:',
     navigationType: 'linear',
     nextSceneKey: 'carta_schneider_03',
@@ -455,22 +452,12 @@ export const MOCK_STORY: Record<string, SceneData> = {
     sceneTitle: 'ESTACIÓN DE SUBTE',
     mode: 'layered',
     backgroundUrl: '/assets/Fondos/pergamino.jpg',
-    documentText: `— A partir del próximo año, todo ciudadano de Refugia que haya cumplido los
-15 años, será reclutado mediante el protocolo de La Llamada para unirse como
-Explorador Novato al Gremio de Exploradores.
+    documentFont: 'serif',
+    documentText: `— A partir del próximo año, todo ciudadano de Refugia que haya cumplido los 15 años, será reclutado mediante el protocolo de La Llamada para unirse como Explorador Novato al Gremio de Exploradores.
 
-— Los nuevos reclutas serán ensubteados durante un periodo de seis meses, que
-culminará con una prueba de habilidades de supervivencia. Una vez superada
-esta prueba recibirán el título de Explorador Avanzado y tendrán permiso para
-seguir explorando nuevas zonas a cambio de créditos y otros beneficios.
+— Los nuevos reclutas serán entrenados durante un periodo de seis meses, que culminará con una prueba de habilidades de supervivencia. Una vez superada esta prueba recibirán el título de Explorador Avanzado y tendrán permiso para seguir explorando nuevas zonas a cambio de créditos y otros beneficios.
 
-— En caso de no haber superado esta prueba, quienes regresen a Refugia serán
-reasignados a La Llamada para repetir el ensubteamiento.`,
-    overlayImage: {
-      url: '/assets/schneider-foto.png',
-      alt: 'José Schneider',
-      position: 'bottom-right',
-    },
+— En caso de no haber superado esta prueba, quienes regresen a Refugia serán reasignados a La Llamada para repetir el entrenamiento.`,
     navigationType: 'linear',
     nextSceneKey: 'carta_schneider_04',
   },
@@ -480,22 +467,12 @@ reasignados a La Llamada para repetir el ensubteamiento.`,
     sceneTitle: 'ESTACIÓN DE SUBTE',
     mode: 'layered',
     backgroundUrl: '/assets/Fondos/pergamino.jpg',
-    documentText: `— No obligaremos a participar a quienes sufran problemas motrices o de salud
-    graves. También podrán negarse al ensubteamiento aquellos que destaquen lo
-    suficiente en sus estudios como para poder obtener una beca en la Universidad
-    Subterránea, y formarse para unirse a nuestros prestigiosos médicos, ingenieros
-    y científicos.
+    documentFont: 'serif',
+    documentText: `— No obligaremos a participar a quienes sufran problemas motrices o de salud graves. También podrán negarse al entrenamiento aquellos que destaquen lo suficiente en sus estudios como para poder obtener una beca en la Universidad Subterránea, y formarse para unirse a nuestros prestigiosos médicos, ingenieros y científicos.
 
-    — El gasto económico del viaje, el hospedaje y los materiales necesarios serán
-    cubiertos por el Consejo de Refugia.
+— El gasto económico del viaje, el hospedaje y los materiales necesarios serán cubiertos por el Consejo de Refugia.
 
-    — Debido a la gravedad del asunto no podemos permitir que los reclutados se
-    nieguen a seguir el protocolo. La única alternativa será el exilio.`,
-    overlayImage: {
-      url: '/assets/schneider-foto.png',
-      alt: 'José Schneider',
-      position: 'bottom-right',
-    },
+— Debido a la gravedad del asunto no podemos permitir que los reclutados se nieguen a seguir el protocolo. La única alternativa será el exilio.`,
     navigationType: 'linear',
     nextSceneKey: 'carta_schneider_05',
   },
@@ -505,16 +482,10 @@ reasignados a La Llamada para repetir el ensubteamiento.`,
     sceneTitle: 'ESTACIÓN DE SUBTE',
     mode: 'layered',
     backgroundUrl: '/assets/Fondos/pergamino.jpg',
-    documentText: `Estamos listos para recibir a nuestros compañeros
-    con los brazos abiertos, y les agradecemos a cada
-    uno de ellos por su inmensa valentía.
-    
-    Les mando mis más sinceros abrazos, José”.`,
-    overlayImage: {
-      url: '/assets/schneider-foto.png',
-      alt: 'José Schneider',
-      position: 'bottom-right',
-    },
+    documentFont: 'script',
+    documentText: `Estamos listos para recibir a nuestros compañeros con los brazos abiertos, y les agradecemos a cada uno de ellos por su inmensa valentía.
+
+Les mando mis más sinceros abrazos, José”.`,
     navigationType: 'linear',
     nextSceneKey: 'estacion_subte_04',
   },
@@ -1247,13 +1218,12 @@ Ya estamos muy cerca de la Isla Capital, les pido que agarren sus cosas y se pre
   },
   ch1_ending: {
     key: 'ch1_ending',
-    chapterTitle: ' ',
+    chapterTitle: '',
     sceneTitle: 'Continuará...',
     mode: 'layered',
     backgroundUrl: '/assets/Fondos/portada-demo.jpg',
     speakerName: '',
     dialogueText: '',
-    navigationType: 'linear',
-    nextSceneKey: 'hab_daniel_01',
+    navigationType: 'end',
   },
 }

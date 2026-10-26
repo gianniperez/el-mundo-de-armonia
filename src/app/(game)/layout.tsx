@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Cormorant_Garamond, Dancing_Script } from "next/font/google";
+import { Geist, Geist_Mono, Source_Serif_4, Dawning_of_a_New_Day } from "next/font/google";
 import "../globals.css";
 
 const geistSans = Geist({
@@ -12,16 +12,16 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const cormorant = Cormorant_Garamond({
-  variable: "--font-cormorant",
+const sourceSerif = Source_Serif_4({
+  variable: "--font-source-serif",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600", "700"],
 });
 
-const dancingScript = Dancing_Script({
-  variable: "--font-dancing",
+const dawningScript = Dawning_of_a_New_Day({
+  variable: "--font-dawning",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400"],
 });
 
 export const metadata: Metadata = {
@@ -37,9 +37,13 @@ export default function GameLayout({
   return (
     <html
       lang="es"
-      className={`${geistSans.variable} ${geistMono.variable} ${cormorant.variable} ${dancingScript.variable} h-full antialiased dark`}
+      className={`${geistSans.variable} ${geistMono.variable} ${sourceSerif.variable} ${dawningScript.variable} h-full antialiased dark`}
     >
-      <body className="min-h-full bg-black text-white selection:bg-amber-400 selection:text-black overflow-x-hidden">
+      <head>
+        {/* Adobe Fonts (Typekit) para Adobe Handwriting (Ernie / Tiffany) */}
+        <link rel="stylesheet" href="https://use.typekit.net/dqh7tzt.css" />
+      </head>
+      <body className="min-h-full bg-black text-white selection:bg-amber-400 selection:text-black overflow-hidden m-0 p-0">
         {children}
       </body>
     </html>

@@ -17,9 +17,10 @@ body {
 }
 
 .font-title-serif {
-  font-family: var(--font-cormorant), Georgia, serif;
+  font-family: var(--font-source-serif), "Source Serif Pro", Georgia, serif;
 }
 
 .font-title-script {
-  font-family: var(--font-dancing), "Brush Script MT", cursive;
+  /* Si Adobe Handwriting está cargada en el sistema o via Typekit, la usa primero; de lo contrario usa Dawning of a New Day */
+  font-family: "adobe-handwriting-ernie", "adobe-handwriting-tiffany", "Adobe Handwriting", var(--font-dawning), cursive;
 }

@@ -23,6 +23,9 @@ export default buildConfig({
   },
   collections: [Users, Media, Backgrounds, Chapters, Characters, Scenes],
   editor: lexicalEditor(),
+  graphQL: {
+    disable: true,
+  },
   secret: process.env.PAYLOAD_SECRET || 'armonia-visual-novel-secret-key-super-safe-9876543210',
   typescript: {
     outputFile: path.resolve(dirname, 'payload-types.ts'),

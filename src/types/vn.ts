@@ -40,6 +40,7 @@ export interface SceneData {
 
   // Document / Letter mode
   documentText?: string
+  documentFont?: 'script' | 'serif'
   overlayImage?: OverlayImage
   
   // Audio

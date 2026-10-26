@@ -9,9 +9,9 @@ interface CharacterStageProps {
 }
 
 const positionClasses = {
-  left: "left-[10%] md:left-[15%]",
+  left: "left-[5%] md:left-[8%]",
   center: "left-1/2 -translate-x-1/2",
-  right: "right-[5%] md:right-[10%]",
+  right: "right-[3%] sm:right-[6%] md:right-[4%]",
 };
 
 export const CharacterStage: React.FC<CharacterStageProps> = ({
@@ -29,8 +29,8 @@ export const CharacterStage: React.FC<CharacterStageProps> = ({
             transition={{ duration: 0.45, ease: "easeOut" }}
             className={`absolute bottom-0 ${positionClasses[char.position]} flex flex-col items-center select-none`}
           >
-            {/* Character Sprite */}
-            <div className="relative w-[340px] md:w-[460px] lg:w-[500px] h-[520px] md:h-[680px] lg:h-[740px] flex items-end justify-center">
+            {/* Character Sprite - Escala y alineación exacta (+10px según feedback) */}
+            <div className="relative w-[320px] sm:w-[390px] md:w-[450px] lg:w-[500px] h-[510px] sm:h-[610px] md:h-[690px] lg:h-[760px] flex items-end justify-center">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={char.spriteUrl}

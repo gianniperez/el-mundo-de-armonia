@@ -4,7 +4,7 @@ export const Characters: CollectionConfig = {
   slug: 'characters',
   admin: {
     useAsTitle: 'name',
-    defaultColumns: ['name', 'themeColor'],
+    defaultColumns: ['name', 'avatar', 'shortDescription'],
   },
   fields: [
     {
@@ -16,13 +16,7 @@ export const Characters: CollectionConfig = {
     {
       name: 'shortDescription',
       type: 'text',
-      label: 'Descripción breve',
-    },
-    {
-      name: 'themeColor',
-      type: 'text',
-      label: 'Color característico (hex, ej: #d97706 o #000000)',
-      defaultValue: '#000000',
+      label: 'Descripción breve (rol o notas del personaje)',
     },
     {
       name: 'avatar',

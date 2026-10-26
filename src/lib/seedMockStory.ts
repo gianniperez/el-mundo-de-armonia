@@ -6,11 +6,11 @@ import type { CharacterOnStage, SceneData } from '@/types/vn'
 
 type MediaCategory = 'character' | 'background' | 'slide' | 'music' | 'sfx' | 'ui'
 
-const CHARACTER_CANONICAL: Record<string, { name: string; themeColor: string }> = {
-  daniel: { name: 'Daniel Torres', themeColor: '#d97706' },
-  madre: { name: 'Mamá de Daniel', themeColor: '#a78bfa' },
-  gabriela: { name: 'Gabriela Valdez', themeColor: '#b45309' },
-  nicola: { name: 'Nicola Costa', themeColor: '#2563eb' },
+const CHARACTER_CANONICAL: Record<string, { name: string }> = {
+  daniel: { name: 'Daniel Torres' },
+  madre: { name: 'Mamá de Daniel' },
+  gabriela: { name: 'Gabriela Valdez' },
+  nicola: { name: 'Nicola Costa' },
 }
 
 const CHAPTER_1 = {
@@ -245,7 +245,6 @@ export async function seedMockStory(payload: Payload) {
     const data = {
       name: canonical.name,
       shortDescription: `Personaje importado desde mockStory (${characterId})`,
-      themeColor: canonical.themeColor,
       avatar,
       expressions,
     }
@@ -333,6 +332,7 @@ export async function seedMockStory(payload: Payload) {
       background: scene.backgroundUrl ? backgroundCache.get(scene.backgroundUrl) : undefined,
       overlayImage: scene.overlayImage?.url ? mediaCache.get(scene.overlayImage.url) : undefined,
       documentText: scene.documentText || undefined,
+      documentFont: scene.documentFont || undefined,
       charactersOnStage,
       speakerName: scene.speakerName || undefined,
       speakerStatus: scene.speakerStatus || undefined,

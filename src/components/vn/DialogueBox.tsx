@@ -2,7 +2,6 @@
 
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown } from "lucide-react";
 
 interface DialogueBoxProps {
   speakerName?: string;
@@ -74,8 +73,8 @@ const DialogueContent: React.FC<DialogueBoxProps> = ({
       )}
 
       {/* Main Dialogue Card */}
-      <div className="bg-black/75 backdrop-blur-xl border border-white/25 rounded-2xl px-6 md:px-8 pt-7 pb-6 text-white shadow-2xl min-h-[120px] md:min-h-[140px] flex flex-col justify-between hover:border-white/40 transition-colors">
-        <div className={hasCharacter ? "max-w-[90%] md:max-w-xl" : "w-full"}>
+      <div className="bg-black/80 backdrop-blur-xl border border-white/25 rounded-2xl px-6 md:px-8 pt-7 pb-6 text-white shadow-2xl min-h-[110px] md:min-h-[130px] flex flex-col justify-between hover:border-white/40 transition-colors">
+        <div className={hasCharacter ? "w-[68%] sm:w-[70%] md:w-[72%] max-w-lg" : "w-full"}>
           {/* Speaker Status / Stage Directions */}
           {speakerStatus && (
             <p className="text-xs md:text-sm italic text-neutral-300 mb-2 font-sans whitespace-pre-line leading-relaxed">
@@ -87,19 +86,6 @@ const DialogueContent: React.FC<DialogueBoxProps> = ({
           <p className="text-sm md:text-base leading-relaxed tracking-wide font-normal font-sans text-neutral-100 whitespace-pre-line">
             <span>{dialogueText.slice(0, displayedLength)}</span>
           </p>
-        </div>
-
-        {/* Advance indicator */}
-        <div className="self-end pt-2 flex items-center gap-1.5 text-xs text-neutral-400">
-          <span className="text-[10px] tracking-wider opacity-60">
-            {!isFinished ? "Clic para completar" : "Clic para continuar"}
-          </span>
-          <motion.div
-            animate={{ y: [0, 4, 0] }}
-            transition={{ duration: 1.2, repeat: Infinity }}
-          >
-            <ChevronDown className="w-4 h-4 text-white/80" />
-          </motion.div>
         </div>
       </div>
     </motion.div>
